@@ -9,18 +9,35 @@
         <table class="table table-striped">
             <thead>
                 <tr>
+                    <th scope="col">Photo</th>
+                    <th scope="col">Lastname</th>
                     <th scope="col">Name</th>
                     <th scope="col">Phone</th>
                     <th scope="col">Email</th>
                 </tr>
             </thead>
             <tbody>
+                {% for contact in contacts %}
+                <img src="{{ contact.photo.url }}" alt="Contact`s photo" width="50">
+                {% else %}
+                <img src="/media/icon.jpg" alt="Photo" width="50">
+                {% endif %}
                 <tr>
-                    <td>John Doe</td>
-                    <td>+123456789</td>
-                    <td>johndoe@example.com</td>
+                    <td>
+                        { if contact.photo }
+                    </td>
+                    <td>{{ contact.last_name }}</td>
+                    <td>{{ contact.first_name }}</td>
+                    <td>{{ contact.phone_number }}</td>
+                    <td>{{ contact.email }}</td>
                 </tr>
-                <tr>
+                {% endfor %}
+<!--                <tr>-->
+<!--                    <td>John Doe</td>-->
+<!--                    <td>+123456789</td>-->
+<!--                    <td>johndoe@example.com</td>-->
+<!--                </tr>-->
+<!--                <tr>-->
                     <td>Jane Smith</td>
                     <td>+987654321</td>
                     <td>janesmith@example.com</td>
