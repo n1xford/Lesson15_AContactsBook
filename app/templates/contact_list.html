@@ -18,13 +18,13 @@
             </thead>
             <tbody>
                 {% for contact in contacts %}
+                <tr>
+                    <td>
+                {% if contact.photo %}
                 <img src="{{ contact.photo.url }}" alt="Contact`s photo" width="50">
                 {% else %}
                 <img src="/media/icon.jpg" alt="Photo" width="50">
                 {% endif %}
-                <tr>
-                    <td>
-                        { if contact.photo }
                     </td>
                     <td>{{ contact.last_name }}</td>
                     <td>{{ contact.first_name }}</td>
@@ -55,3 +55,5 @@
         <a href="#" class="btn btn-info">About Contact</a>
         <a href="#" class="btn btn-success">Display</a>
     </div>
+
+{% endblock %}
