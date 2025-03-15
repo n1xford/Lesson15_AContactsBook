@@ -16,6 +16,16 @@
                     <th scope="col">Email</th>
                 </tr>
             </thead>
+
+            <form id="search2" action="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                    </svg>
+                </button>
+            </form>
+
             <tbody>
                 {% for contact in contacts %}
                 <tr>
@@ -49,11 +59,11 @@
 
     <!-- Right section: Action Buttons -->
     <div class="action-buttons">
-        <a href="#" class="btn btn-primary">New Contact</a>
-        <a href="#" class="btn btn-secondary">Edit Contact</a>
-        <a href="#" class="btn btn-danger">Delete Contact</a>
-        <a href="#" class="btn btn-info">About Contact</a>
-        <a href="#" class="btn btn-success">Display</a>
+        <a href="#" class="btn btn-1">New Contact</a>
+        <a href="#" class="btn btn-2">Edit Contact</a>
+        <a href="#" class="btn btn-3">Delete Contact</a>
+        <a href="#" class="btn btn-4">About Contact</a>
+        <a href="#" class="btn btn-5">Display</a>
     </div>
 
 {% endblock %}
