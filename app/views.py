@@ -27,5 +27,5 @@ def edit_contact(request, pk):
             form.save()
             return redirect('contact_list')
     else:
-        form = ContactsForm()
+        form = ContactsForm(instance=contact)
         return render(request, 'contact_form.html',{'form': form})
