@@ -7,6 +7,7 @@ class Contact(models.Model):
     phone_number = models.CharField(max_length=15)
     email = models.EmailField()
     photo = models.ImageField(upload_to='contacts_photo/',
+                              default='icon.jpg',
                               blank=True,
                               null=True)
     # object = models.Manager()

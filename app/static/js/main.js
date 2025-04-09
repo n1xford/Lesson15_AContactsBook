@@ -32,18 +32,18 @@ document.addEventListener("DOMContentLoaded", function() {
       editButton.href = `edit/${selectedContactId}/`
 
     });
-    row.addEventListener("dblclick", function() {
-        const contactId = row.dataset.contactId;
-        const detailsRow = document.getElementById('details-' + contactId);
-
-        if (detailsRow.style.display === 'none') {
-            detailsRow.style.display === 'table-row';
-        } else {
-            detailsRow.style.display === 'none';
-        }
-    }
-    }
-
+//    row.addEventListener("dblclick", function() {
+//        const contactId = row.dataset.contactId;
+//        const detailsRow = document.getElementById('details-' + contactId);
+//
+//        if (detailsRow.style.display === 'none') {
+//            detailsRow.style.display === 'table-row';
+//        } else {
+//            detailsRow.style.display === 'none';
+//        }
+//    }
+//    }
+//
   });
 
 });

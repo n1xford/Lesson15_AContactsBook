@@ -42,24 +42,13 @@
                     <td>{{ contact.email }}</td>
                 </tr>
                 {% endfor %}
-<!--                <tr>-->
-<!--                    <td>John Doe</td>-->
-<!--                    <td>+123456789</td>-->
-<!--                    <td>johndoe@example.com</td>-->
-<!--                </tr>-->
-<!--                <tr>-->
-                    <td>Jane Smith</td>
-                    <td>+987654321</td>
-                    <td>janesmith@example.com</td>
-                </tr>
-                <!-- Add more rows as needed -->
             </tbody>
         </table>
     </div>
 
     <!-- Right section: Action Buttons -->
     <div class="action-buttons">
-        <a href="#" class="btn btn-1">New Contact</a>
+        <a href="{% url 'add_contact' %}" class="btn btn-1">New Contact</a>
         <a href="#" class="btn btn-2">Edit Contact</a>
         <a href="#" class="btn btn-3">Delete Contact</a>
         <a href="#" class="btn btn-4">About Contact</a>
