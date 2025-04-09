@@ -39,3 +39,16 @@ Template for django start project
     ```
    
 6. Створення нового проєкту Django
+
+
+# About project 
+This is description of this project
+
+
+
+1. What kind of project is this <br>
+    ```bash
+    This is a phone book where your contacts are stored,
+    you can also add, delete, edit, and more details.
+   ```
+2. 
