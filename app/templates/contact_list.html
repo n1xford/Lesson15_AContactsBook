@@ -30,11 +30,7 @@
                 {% for contact in contacts %}
                 <tr>
                     <td>
-                {% if contact.photo %}
-                <img src="{{ contact.photo.url }}" alt="Contact`s photo" width="50">
-                {% else %}
-                <img src="/media/icon.jpg" alt="Photo" width="50">
-                {% endif %}
+                        <img src="{{ contact.photo.url }}" alt="Contact`s photo" width="50">
                     </td>
                     <td>{{ contact.last_name }}</td>
                     <td>{{ contact.first_name }}</td>
@@ -59,7 +55,7 @@
 
     <!-- Right section: Action Buttons -->
     <div class="action-buttons">
-        <a href="#" class="btn btn-1">New Contact</a>
+        <a href="{% url 'add_contact' %}" class="btn btn-1">New Contact</a>
         <a href="#" class="btn btn-2">Edit Contact</a>
         <a href="#" class="btn btn-3">Delete Contact</a>
         <a href="#" class="btn btn-4">About Contact</a>
