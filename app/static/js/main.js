@@ -1,16 +1,16 @@
 //app/static/js/main.js
 document.addEventListener("DOMContentLoaded", function() {
 
-//  window.toggleDetails = function(row) {
-//    const contactId = row.dataset.contactId;
-//    const detailsRow = document.getElementById('details-' + contactId);
-//
-//    if (detailsRow.style.display === 'none') {
-//        detailsRow.style.display === 'table-row';
-//    } else {
-//        detailsRow.style.display === 'none';
-//    }
-//  }
+  window.toggleDetails = function(row) {
+    const contactId = row.dataset.contactId;
+    const detailsRow = document.getElementById('details-' + contactId);
+
+    if (detailsRow.style.display === 'none') {
+        detailsRow.style.display = 'table-row';
+    } else {
+        detailsRow.style.display = 'none';
+    }
+  }
 
 
   let selectedRow = null;
@@ -32,18 +32,19 @@ document.addEventListener("DOMContentLoaded", function() {
       editButton.href = `edit/${selectedContactId}/`
 
     });
+
 //    row.addEventListener("dblclick", function() {
 //        const contactId = row.dataset.contactId;
 //        const detailsRow = document.getElementById('details-' + contactId);
 //
 //        if (detailsRow.style.display === 'none') {
-//            detailsRow.style.display === 'table-row';
+//            detailsRow.style.display = 'table-row';
 //        } else {
-//            detailsRow.style.display === 'none';
+//            detailsRow.style.display = 'none';
 //        }
-//    }
-//    }
-//
+//    });
+
   });
+
 
 });

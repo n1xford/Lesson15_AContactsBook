@@ -28,12 +28,12 @@
 
             <tbody>
                 {% for contact in contacts %}
-                <tr>
+                <tr class="contact-row" data-contact-id="{{ contact.id }}" ondblclick="toggleDetails(this)">
                     <td>
                 {% if contact.photo %}
-                <img src="{{ contact.photo.url }}" alt="Contact`s photo" width="50">
+                        <img src="{{ contact.photo.url }}" alt="Contact`s photo" width="50">
                 {% else %}
-                <img src="/media/icon.jpg" alt="Photo" width="50">
+                        <img src="/media/icon.jpg" alt="Photo" width="50">
                 {% endif %}
                     </td>
                     <td>{{ contact.last_name }}</td>
@@ -41,6 +41,16 @@
                     <td>{{ contact.phone_number }}</td>
                     <td>{{ contact.email }}</td>
                 </tr>
+
+                <tr id="details-{{ contact.id }}" style="display: none;">
+                    <td colspan="5">
+                        <div>
+                            <a href="#">📞Call</a>
+                            <a href="#">✉️Write</a>
+                        </div>
+                    </td>
+                </tr>
+
                 {% endfor %}
             </tbody>
         </table>
@@ -49,7 +59,7 @@
     <!-- Right section: Action Buttons -->
     <div class="action-buttons">
         <a href="{% url 'add_contact' %}" class="btn btn-1">New Contact</a>
-        <a href="#" class="btn btn-2">Edit Contact</a>
+        <a href="#" class="btn btn-2" id="editButton">Edit Contact</a>
         <a href="#" class="btn btn-3">Delete Contact</a>
         <a href="#" class="btn btn-4">About Contact</a>
         <a href="#" class="btn btn-5">Display</a>
